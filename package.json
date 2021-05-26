@@ -62,15 +62,6 @@
             "last 1 safari version"
         ]
     },
-    "lint-staged": {
-        "*.{json}": [
-            "prettier --write"
-        ],
-        "*.{js,jsx,ts,tsx}": [
-            "prettier --write",
-            "eslint --fix"
-        ]
-    },
     "repository": {
         "type": "git",
         "url": "https://github.com/kdzuin/gatsby-starter-kdzuin-styled"
