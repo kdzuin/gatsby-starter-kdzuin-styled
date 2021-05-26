@@ -2,7 +2,9 @@ import React from 'react';
 import { StaticQuery, graphql } from 'gatsby';
 import { Container, Text } from 'tamia';
 
-interface FooterProps {}
+interface FooterProps {
+    children?: never;
+}
 
 const YEAR = new Date().getFullYear();
 

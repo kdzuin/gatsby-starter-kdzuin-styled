@@ -57,7 +57,7 @@ const AppLayout: React.FunctionComponent<AppLayoutProps> = ({
                     <TamiaRoot theme={theme}>
                         <Flex flexDirection="column" alignItems="stretch">
                             <Box>
-                                <Header location={location}></Header>
+                                <Header location={location} />
                             </Box>
                             {children}
                             <Box mt="auto" pt="l">

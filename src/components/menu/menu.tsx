@@ -1,5 +1,4 @@
 import React from 'react';
-import cx from 'classnames';
 import { Stack, Box } from 'tamia';
 import { Link } from 'tamia-gatsby-link';
 import styled from 'styled-components';
@@ -33,16 +32,13 @@ const ITEMS: Item[] = [
     },
 ];
 
-const isCurrent = (url = '', href: string) =>
-    url === href || url.startsWith(href);
-
 const MenuLink = styled(Link)({
     '&, &:link': { textDecoration: 'none' },
     '&[aria-current]': { textDecoration: 'underline' },
     '&:hover': { textDecoration: 'underline' },
 });
 
-export const Menu: React.FunctionComponent<MenuProps> = ({ location }) => {
+export const Menu: React.FunctionComponent<MenuProps> = () => {
     return (
         <Stack direction={['column', 'row']}>
             {ITEMS.map(({ title, hint, href }) => (

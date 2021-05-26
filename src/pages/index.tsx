@@ -1,6 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
-import { Container, TextContent } from 'tamia';
+import { TextContent } from 'tamia';
 
 export default () => {
     return (
