@@ -1,0 +1,162 @@
+const baseFont = ['Georgia', 'serif'].join(', ');
+const headingFont = ['"Playfair Display"', 'serif'];
+const monospaceFont = [
+    'Monaco',
+    '"DejaVu Sans Mono"',
+    '"Lucida Console"',
+    'monospace',
+].join(', ');
+const space = {
+    xxs: '0.125rem', // 2px
+    xs: '0.25rem', // 4px
+    s: '0.5rem', // 8px
+    m: '1rem', // 16px
+    l: '2rem', // 32px
+    xl: '4rem', // 64px
+    xxl: '8rem', // 128px
+    xxxl: '16rem', // 256px
+};
+const breakpoints = [
+    '32rem', // 512px
+    '48rem', // 768px
+    '62rem', // 992px
+    '75rem', // 1200px
+];
+const fonts = {
+    base: baseFont,
+    heading: headingFont,
+    pre: monospaceFont,
+    code: monospaceFont,
+};
+const fontSizes = {
+    base: '1rem',
+    xxxxl: '4.2rem',
+    xxxl: '3.2rem',
+    xxl: '2.4rem',
+    xl: '1.8rem',
+    l: '1.3rem',
+    m: '1rem',
+    s: '0.85rem',
+    xs: '0.75rem',
+};
+const colors = {
+    bg: '#fff',
+    base: '#222',
+    border: '#ddd',
+    primary: '#14120f',
+    hover: '#f56a00',
+    focus: '#f56a00',
+    selection: 'rgb(255,237,117)',
+    selectionAlpha: 'rgba(255,237,117,0.25)', // TODO,
+    mono: {
+        white: '#fff',
+        dark: '#14120f',
+        grayLight: '#f6f6f6',
+        gray: '#bdbdbd',
+        grayDark: '#767676',
+    },
+};
+const fontWeights = {
+    base: 400,
+    heading: 400,
+    bold: 700,
+};
+const lineHeights = {
+    base: 1.5,
+    heading: 1.1,
+    pre: 1.3,
+};
+const letterSpacings = {
+    base: 0,
+    heading: 0,
+};
+const borders = {
+    focus: '3px solid',
+};
+const headingBaseStyles = {
+    color: 'base',
+    fontFamily: 'heading',
+    fontWeight: 'heading',
+    lineHeight: 'heading',
+    letterSpacing: 'heading',
+};
+const textBaseStyles = {
+    color: 'base',
+    fontFamily: 'base',
+    fontWeight: 'base',
+    lineHeight: 'base',
+    letterSpacing: 'base',
+};
+
+export default {
+    // Base font size (applied to body)
+    baseFontSize: '1em', // 1em = 16px
+    blockMarginBottom: space.m,
+    headingMarginTop: space.l,
+    listMargin: '1.3em',
+    focusOutlineOffset: '2px',
+    page: {
+        // Body
+        bodyMaxWidth: '75rem',
+        bodyPaddingX: space.m,
+        bodyPaddingY: 0,
+
+        // Content (<Container>)
+        contentMaxWidth: null,
+        contentPaddingX: 0,
+        contentPaddingY: 0,
+
+        // Max text column width (<TextContainer>)
+        textMaxWidth: null,
+    },
+    fonts,
+    space,
+    fontSizes,
+    fontWeights,
+    lineHeights,
+    letterSpacings,
+    colors,
+    borders,
+    breakpoints,
+    headingStyles: {
+        1: {
+            ...headingBaseStyles,
+            fontSize: 'xxl',
+        },
+        2: {
+            ...headingBaseStyles,
+            fontSize: 'xl',
+        },
+        3: {
+            ...headingBaseStyles,
+            fontSize: 'l',
+        },
+        4: {
+            ...headingBaseStyles,
+            fontSize: 'm',
+            fontWeight: 'bold',
+        },
+        5: {
+            ...headingBaseStyles,
+            fontSize: 'm',
+            fontStyle: 'italic',
+        },
+        6: {
+            ...headingBaseStyles,
+            fontSize: 'm',
+        },
+    },
+    textStyles: {
+        base: {
+            ...textBaseStyles,
+        },
+        small: {
+            ...textBaseStyles,
+            fontSize: 's',
+        },
+        large: {
+            ...textBaseStyles,
+            fontSize: 'l',
+        },
+    },
+} as const;
