@@ -1,4 +1,4 @@
-# Gatsby Starter by K.Dzuin
+# Gatsby Starter by Konstantin Dzuin
 
 -   TypeScript
 -   Styled Components
