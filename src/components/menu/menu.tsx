@@ -19,15 +19,15 @@ const ITEMS: Item[] = [
         href: '/page1/',
     },
     {
-        title: 'Page 1',
+        title: 'Page 2',
         href: '/page2/',
     },
     {
-        title: 'Page 1',
+        title: 'Page 3',
         href: '/page3/',
     },
     {
-        title: 'Page 1',
+        title: 'Page 4',
         href: '/page4/',
     },
 ];
